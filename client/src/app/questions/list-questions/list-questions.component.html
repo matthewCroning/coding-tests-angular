@@ -1,0 +1,7 @@
+<div class="container">
+    <ul class="list-group">
+        <li *ngFor="let question of questions; let i = index "class="list-group-item" routerLink="/{{question._id}}">
+            {{ i+1 }}. {{ question.name }}
+        </li>
+    </ul>    
+</div>

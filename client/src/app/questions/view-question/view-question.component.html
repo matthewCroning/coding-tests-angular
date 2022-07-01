@@ -1,0 +1,33 @@
+<div class="row">
+
+    <div class="col-6">
+        <div class="container">
+            <ng-container *ngIf="question">
+                <h4>
+                    {{question.name}}
+                </h4>
+                
+                <hr>
+                
+                <p>
+                    {{question.description.text}}  
+                </p>
+                
+                <ng-container *ngFor="let example of question.description.examples; let i = index">
+                    <h5>
+                        Example {{ i+1 }} 
+                    </h5>
+                    <div class="bg-light mb-3 p-3">
+                        {{ example }}
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="container">
+            <h3>Main working!</h3>
+        </div>
+    </div>
+</div>
