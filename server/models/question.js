@@ -8,6 +8,11 @@ const questionSchema = new Schema({
     examples: [String],
     constraints: [String],
     },
+    testCode: {
+        front: String,
+        end: String
+    },
+    sampleCode: String,
     accepted: Number,
     submitted: Number
 });

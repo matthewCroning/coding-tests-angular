@@ -28,14 +28,12 @@ export class ViewQuestionComponent implements OnInit {
 
 
   constructor(private QuestionService: QuestionService, public CompilerService: CompilerService, private route: ActivatedRoute) { 
-    this.code = `function myFunction() {
-      document.getElementById("demo1").innerHTML = "Test 1!";
-      document.getElementById("demo2").innerHTML = "Test 2!";
-    }`;
+    
 
     this.QuestionService.findById(this.route.snapshot.paramMap.get('questionId')).subscribe((question: any) => {
       console.log(question);
       this.question = question;
+      this.code = question.sampleCode;
     })
   }
 

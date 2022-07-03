@@ -27,7 +27,8 @@
 
     <div class="col-6">
         <div class="container">
-            <h3>Main working!</h3>
+            <textarea [(ngModel)]="code" cols="30" rows="10"></textarea>
         </div>
     </div>
+    <button (click)="CompilerService.compile(question.testCode.front + code + question.testCode.end)">submit</button>
 </div>
